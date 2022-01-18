@@ -30,6 +30,7 @@ import { AdminComponent } from './pages/dashboard/admin/admin.component';
 import { AuthorsComponent } from './pages/entities/authors/authors.component';
 import { PublishersComponent } from './pages/entities/publishers/publishers.component';
 import { SharedService } from './services/shared.service';
+import { BooksComponent } from './pages/entities/books/books.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { SharedService } from './services/shared.service';
     AdminComponent,
     AuthorsComponent,
     PublishersComponent,
+    BooksComponent,
   ],
   imports: [
     BrowserModule,

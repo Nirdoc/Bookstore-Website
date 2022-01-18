@@ -1,18 +1,29 @@
-<p>publishers works!</p>
-
+<p>books works!</p>
 
 <table class="table table-striped table-dark" style="width: 50%; margin-left: 25%; margin-top: 5%;">
     <thead>
       <tr>
         <th scope="col">#</th>
         <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Stock</th>
+        <th scope="col">Description</th>
+        <th scope="col">Author</th>
+        <th scope="col">Publisher</th>
+        
         <th scope="col">Options</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let dataItem of PublisherList">
-        <td>{{dataItem.publisherId}}</td>
+      <tr *ngFor="let dataItem of BookList">
+        <td>{{dataItem.bookId}}</td>
         <td>{{dataItem.name}}</td>
+        <td>{{dataItem.price}}</td>
+        <td>{{dataItem.stock}}</td>
+        <td>{{dataItem.description}}</td>
+        <td>{{dataItem.authorId.name}}</td>
+        <td>{{dataItem.publisherId}}</td>
+        
         <td>
           <button type="button" class="btn btn-light mr-1">
             Edit

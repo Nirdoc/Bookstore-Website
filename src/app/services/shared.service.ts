@@ -14,4 +14,12 @@ export class SharedService {
     getAuthorList():Observable<any[]>{
         return this.http.get<any>(`${environment.baseUrl}/getAuthors`);
     }
+
+    getPublisherList():Observable<any[]>{
+      return this.http.get<any>(`${environment.baseUrl}/getPublishers`);
+    }
+
+    getBookList():Observable<any[]>{
+        return this.http.get<any>(`${environment.baseUrl}/getBooks`);
+  }
 }

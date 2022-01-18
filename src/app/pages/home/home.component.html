@@ -5,8 +5,8 @@
     <span class="menu-spacer"></span>
     <div>
       <a mat-button routerLink="authors"> Authors </a>
-      <a mat-button> Contact </a>
-      <a mat-button> About us </a>
+      <a mat-button routerLink="publishers"> Publishers </a>
+      <a mat-button routerLink="books"> Books </a>
     </div>
     <div fxFlex fxLayout fxLayoutAlign="flex-end" fxLayoutGap="10px">
         <button *ngIf="isAdmin" mat-raised-button color="accent" (click)="admin()" fxLayoutAlign="stretch">Admin</button>

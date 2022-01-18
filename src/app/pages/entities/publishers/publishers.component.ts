@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-publishers',
@@ -7,9 +8,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PublishersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service:SharedService) { }
+
+  PublisherList:any=[];
 
   ngOnInit(): void {
+    this.refreshPublisherList()
+  }
+
+  refreshPublisherList(){
+    this.service.getPublisherList().subscribe(data=>{
+      console.log(data);
+      this.PublisherList=data;
+    });
   }
 
 }
